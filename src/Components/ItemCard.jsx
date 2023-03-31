@@ -1,8 +1,9 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity  } from "react-native";
 import React from "react";
 
 const ItemCard = ({ url, title, price, desc }) => {
   return (
+    <TouchableOpacity>
     <View style={styles.container}>
       <Image
         source={{ uri: url }}
@@ -10,6 +11,7 @@ const ItemCard = ({ url, title, price, desc }) => {
       <Text style={styles.BigFont}>{title} - {price} ₪</Text>
       <Text style={styles.SmFont}>{desc} </Text>
     </View>
+    </TouchableOpacity>
   );
 };
 
